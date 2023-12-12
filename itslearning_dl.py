@@ -175,8 +175,8 @@ def download_element(element_id, dest_path, access_token):
         url = "https://resource.itslearning.com/Proxy/DownloadRedirect.ashx"
         file_response = session.request(
             "GET", url, headers=headers, params=params, timeout=5)
-        download_response(file_response, dest_path)
         logging.info("-> DL Element")
+        download_response(file_response, dest_path)
 
 
 def query_course_list(access_token):  # Get user enrolled courses
@@ -221,7 +221,7 @@ def download_file_resource(resource, access_token):
         logging.error(f"Failed downloading: {resource['Title']}")
         logging.debug(e)
     else:
-        logging.info(f"Downloaded resource '{resource['Title']}' of '{course['Title']}'")
+        logging.info(f"Downloaded resource '{resource['Title']}' of '{resource['CourseId']}'")
 
 
 def download_folder_recursive(course_id, folder_resource, access_token):
@@ -233,11 +233,14 @@ def download_folder_recursive(course_id, folder_resource, access_token):
         folder_path = quote(folder_path)
         Path(folder_path).mkdir(parents=True, exist_ok=True)
 
+        logging.debug(f"query_folder_resources for course {course_id} elId {folder_resource['ElementId']}")
         folder = query_folder_resources(course_id, folder_resource["ElementId"], access_token)
         for resource in folder:
             if resource["ElementType"] == "Folder":
+                logging.debug(f"download_folder_recursive for course {course_id} resource {resource}")
                 download_folder_recursive(course_id, resource, access_token)
             elif resource["ElementType"] == "LearningToolElement":
+                logging.debug(f"download_file_resource resource {resource}")
                 download_file_resource(resource, access_token)
     except Exception as e:
         logging.error(f"An error occurred: {e}")
