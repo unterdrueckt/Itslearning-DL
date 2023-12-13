@@ -104,7 +104,7 @@ def create_env_file(env_path, open_file=True):
                 f.write('ITSLEARNING_INSTANCE=\n')
                 f.write('# leave empty to use the default out folder\n')
                 f.write('ITSLEARNINGDL_OUT=\n')
-            open_env_file()
+            open_env_file(env_path)
         else:
             logging.debug(f".env file already exists at {env_file_path}")
     except Exception as e:
