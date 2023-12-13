@@ -30,12 +30,10 @@ If you prefer not to install the Itslearning-DL Tool globally, you can run it di
 4. Run the Itslearning-DL Tool with your Itslearning credentials:
 
     ```bash
-    python itslearning_dl.py -u YOUR_USERNAME -p YOUR_PASSWORD
+    python itslearning_dl.py -u YOUR_USERNAME -p YOUR_PASSWORD --install False --path /path/to/output
     ```
-
-    Replace `YOUR_USERNAME` and `YOUR_PASSWORD` with your Itslearning credentials.
 
 ## Notes
 
-- This method runs the tool directly from the cloned repository without installing it globally on your system.
+- This method runs the tool directly from the cloned repository without installing it globally on your system and without creating itslearning-dl folder.
 - Make sure to satisfy the prerequisites and install dependencies before using the tool.

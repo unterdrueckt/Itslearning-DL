@@ -6,9 +6,10 @@ setup(
     py_modules=['itslearning_dl'],
     packages=find_packages(),
     install_requires=[
-        'requests',
         'beautifulsoup4',
         'python-dotenv'
+        'Requests',
+        'tqdm',
     ],
     entry_points={
         'console_scripts': [

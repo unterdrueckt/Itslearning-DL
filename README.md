@@ -52,8 +52,18 @@ This tool allows users to:
 **Running without Installation:**  
 If you prefer not to install the tool globally, you can [use the Itslearning-DL Tool without installation](useWithoutInstall.md). This method allows you to run the tool directly from the cloned repository.
 
+### Help Command
+
+For additional information on available commands and options, use the `-h` or `--help` command:
+
+```bash
+itslearning-dl -h
+```
+
+This will display a help message with a list of available options and their descriptions.
+
 ## Configuration
 
 - **Credentials:** You can provide your Itslearning username and password as command-line arguments or set environment variables: `ITSLEARNING_USERNAME` and `ITSLEARNING_PASSWORD`.
-- **Output Path:** By default, the tool saves downloaded resources to the `./out` directory. You can specify a custom path using the `-path` argument.
+- **Output Path:** By default, the tool saves downloaded resources to the `/out` directory. You can specify a custom path using the `--path` argument.
 

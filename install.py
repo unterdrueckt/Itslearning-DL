@@ -20,7 +20,6 @@ def install_package(package_path):
 
 def add_to_windows_path(script_path):
     try:
-        # subprocess.check_call(['setx', 'PATH', f'%PATH%;{script_path}'])
         sys.path.append(script_path)
         print("Path added to system PATH!")
     except subprocess.CalledProcessError as e:
