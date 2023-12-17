@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='itslearning-dl',
-    version='0.1',
-    py_modules=['itslearning_dl'],
+    version='0.2',
+    py_modules=['itslearning_dl', 'conf_manager'],
     packages=find_packages(),
     install_requires=[
         'beautifulsoup4',

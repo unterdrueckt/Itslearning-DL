@@ -35,18 +35,22 @@ This tool allows users to:
     python install.py
     ```
 
-## Usage
+## How to Use the Tool
 
-1. Run the tool with your Itslearning credentials:
+1. **Initial Run**: On the first run, the tool will set up all necessary folders and automatically open the configuration file. You can also manually open the configuration file using the `-conf` or `--config` parameter.
+
+2. **Configuration**: In the configuration file, you can enter your username, password, and instance for the initial setup.
+
+3. **Running the Tool**: You can run the tool using either of the following commands:
 
     ```bash
-    itslearning-dl -u YOUR_USERNAME -p YOUR_PASSWORD
+    itslearning-dl
     ```
 
     or
 
     ```bash
-    ildl -u YOUR_USERNAME -p YOUR_PASSWORD
+    ildl
     ```
 
 **Running without Installation:**  

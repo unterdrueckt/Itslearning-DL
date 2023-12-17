@@ -30,7 +30,7 @@ If you prefer not to install the Itslearning-DL Tool globally, you can run it di
 4. Run the Itslearning-DL Tool with your Itslearning credentials:
 
     ```bash
-    python itslearning_dl.py -u YOUR_USERNAME -p YOUR_PASSWORD --install False --path /path/to/output
+    python itslearning_dl.py --noinstall --username YOUR_USERNAME --password YOUR_PASSWORD --instance INSTANCE_URL --path /path/to/output
     ```
 
 ## Notes
