@@ -7,8 +7,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         'beautifulsoup4',
-        'python-dotenv',
         'Requests',
+        'PyYAML',
         'tqdm',
     ],
     entry_points={
