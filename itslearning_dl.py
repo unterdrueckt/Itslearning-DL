@@ -72,6 +72,15 @@ class ColoredFormatter(logging.Formatter):
 # Create a logger
 logger = logging.getLogger()
 
+def extract_domain(url: str) -> str:
+    pattern = r"(?<=://)([A-Za-z0-9.-]+)(?=/|$)"
+    match = re.search(pattern, url)
+    if match:
+        protocol = url.split("://")[0]
+        return protocol + "://" + match.group(1)
+    else:
+        return ""
+
 start_time_string = datetime.datetime.now().strftime("%d-%m-%Y %H_%M_%S")
 
 username = args.username
@@ -83,7 +92,7 @@ open_state = args.state
 install_sys = not args.noinstall
 logfile_bool = args.logfile
 worker_count = args.worker
-itslearning_instance = args.instance
+itslearning_instance = extract_domain(args.instance)
 user_agent = "com.itslearning.itslearningintapp 3.7.1 (HONOR BLN-L21 / Android 9)"
 
 headers = {
