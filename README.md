@@ -1,4 +1,11 @@
-# Itslearning-DL Tool
+# ‼️ Project Deprecated ‼️
+
+This project is deprecated in favor of a more robust version written in **Go**. For an improved experience, please visit the [ItslearningDL Go](https://gitlab.minie4.de/minie4/itslearningdl.go) repository.
+
+<details>
+<summary>The original Readme is available here.</summary>
+
+## Itslearning-DL Tool
 
 The Itslearning-DL Tool is a Python-based utility for downloading resources from the Itslearning platform.
 
@@ -71,3 +78,4 @@ This will display a help message with a list of available options and their desc
 - **Credentials:** You can provide your Itslearning username and password as command-line arguments or set environment variables: `ITSLEARNING_USERNAME` and `ITSLEARNING_PASSWORD`.
 - **Output Path:** By default, the tool saves downloaded resources to the `/out` directory. You can specify a custom path using the `--path` argument.
 
+</details>
